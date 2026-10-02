@@ -1,0 +1,59 @@
+node_modules/
+dist/
+*.log
+.env
+.env.*
+!.env.example
+
+# Local backups
+src_backup_before_redesign/
+public_backup_before_redesign/
+index_backup_before_redesign.html
+package_backup_before_redesign.json
+
+# Large source/research documents kept locally
+*.docx
+*.pdf
+
+# Large standalone source images/screenshots
+Screenshot *.png
+
+# Large research archive kept locally
+Edge AI work/
+
+# ============================================================
+# LOCAL RESEARCH / SOURCE ARCHIVES
+# ============================================================
+
+Edge AI work/
+src_backup_before_redesign/
+public_backup_before_redesign/
+
+# ============================================================
+# SOURCE DOCUMENTS KEPT LOCALLY
+# ============================================================
+
+*.docx
+*.zip
+
+# Root research/source PDFs
+/*.pdf
+
+# Root source images/screenshots
+/Profile Photo 2.png
+/Screenshot *.png
+/childbirth_rate.png
+/Internal Society for Applied Computing.jpeg
+/IEEE membership Certicate.jpeg
+
+# ============================================================
+# BUILD / ENVIRONMENT
+# ============================================================
+
+node_modules/
+dist/
+*.log
+.env
+.env.*
+!.env.example
+

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * =======================================================================
  * PROFILE & PERSONAL INFORMATION CONFIGURATION
  * =======================================================================
@@ -13,7 +13,7 @@ export const profileData = {
   preferredName: "Abdullahi",
   title: "Embedded AI Researcher & Computer Scientist",
   shortHeadline: "Embedded AI Researcher | Edge AI | Intelligent Systems | Computer Vision",
-  tagline: "First-Class Computer Science Graduate • MSc Embedded AI Researcher • Applied Machine Learning Engineer",
+  tagline: "First-Class Computer Science Graduate â€¢ MSc Embedded AI Researcher â€¢ Applied Machine Learning Engineer",
   
   academicAffiliation: {
     institution: "Abubakar Tafawa Balewa University (ATBU)",
@@ -79,13 +79,13 @@ export const profileData = {
      * When your Google Scholar public profile is created, paste the URL below.
      * Example: "https://scholar.google.com/citations?user=YOUR_ID"
      */
-    googleScholar: "",
+    googleScholar: "https://scholar.google.com/citations?user=kjJJ1tUAAAAJ&hl=en",
     /**
      * ORCID URL:
      * When your ORCID record is created, paste the URL below.
      * Example: "https://orcid.org/0009-0000-0000-0000"
      */
-    orcid: "",
+    orcid: "https://orcid.org/0009-0003-2931-445X",
     ieeeCollabratec: ""
   },
 
@@ -96,3 +96,4 @@ export const profileData = {
     cvFileName: "CV_Abdullahi_Yusuf_Umar.pdf"
   }
 };
+

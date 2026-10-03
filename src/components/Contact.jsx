@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Mail, 
   Phone, 
@@ -38,13 +38,40 @@ export const Contact = () => {
     });
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const mailtoSubject = encodeURIComponent(formData.subject || `Inquiry from ${formData.name}`);
-    const mailtoBody = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:${profileData.contact.email}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+    try {
+      const response = await fetch("https://formspree.io/f/mbglnjol", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        alert("Thank you. Your message has been sent successfully.");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        alert("Sorry, your message could not be sent. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Sorry, there was a problem sending your message. Please try again.");
+    }
   };
 
   return (
@@ -124,7 +151,7 @@ export const Contact = () => {
                 <div className="phone-numbers-group">
                   {profileData.contact.phones.map((phone, idx) => (
                     <React.Fragment key={idx}>
-                      {idx > 0 && <span className="phone-separator">•</span>}
+                      {idx > 0 && <span className="phone-separator">â€¢</span>}
                       <a 
                         href={`tel:${phone.replace(/[\s-]/g, '')}`} 
                         className="method-value contact-link phone-link"
@@ -335,3 +362,4 @@ export const Contact = () => {
 };
 
 export default Contact;
+

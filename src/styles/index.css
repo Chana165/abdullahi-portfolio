@@ -4255,3 +4255,626 @@ code, pre {
 
 
 
+
+/* ==========================================================================
+   LAYOUT V4 — VISUAL SPACING & SECTION RHYTHM REFINEMENT
+   Abdullahi Yusuf Umar | Academic & Embedded AI Portfolio
+
+   Purpose:
+   - Remove remaining excessive vertical whitespace
+   - Tighten hero-to-research transition
+   - Tighten research-to-publications transition
+   - Tighten publications-to-projects transition
+   - Reduce excessive section padding
+   - Prevent stretched visual layouts
+   - Improve desktop/tablet/mobile alignment
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL SECTION RHYTHM
+   -------------------------------------------------------------------------- */
+
+main .section {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. SECTION CONTAINERS
+   -------------------------------------------------------------------------- */
+
+main .section > .container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. SECTION HEADERS
+   -------------------------------------------------------------------------- */
+
+main .section-header {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+main .section-badge {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+main .section-title {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+main .section-subtitle {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. HERO — REMOVE LARGE EMPTY AREA BELOW CONTENT
+   -------------------------------------------------------------------------- */
+
+main .hero,
+main .hero-section,
+main #hero {
+  padding-top: 40px !important;
+  padding-bottom: 28px !important;
+  margin-bottom: 0 !important;
+}
+
+main .hero-container,
+main .hero-inner,
+main .hero-content,
+main .hero-grid,
+main .hero-layout,
+main .hero-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. HERO CONTENT BLOCKS
+   -------------------------------------------------------------------------- */
+
+main .hero-content > * {
+  margin-bottom: 18px;
+}
+
+main .hero-content > *:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. HERO BUTTON / PROFILE LINKS
+   -------------------------------------------------------------------------- */
+
+main .hero .button-group,
+main .hero .hero-actions,
+main .hero .actions,
+main .hero .social-links,
+main .hero .profile-links {
+  margin-top: 18px !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. REMOVE LARGE GAPS BETWEEN MAJOR SECTIONS
+   -------------------------------------------------------------------------- */
+
+main > section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* Consecutive sections should touch through controlled padding,
+   rather than creating a second hidden gap. */
+
+main > section + section {
+  margin-top: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. RESEARCH / PUBLICATIONS / PROJECTS
+   -------------------------------------------------------------------------- */
+
+main .research-section,
+main .publications-section,
+main .projects-section,
+main .background-section,
+main .contact-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. CARDS AND GRIDS
+   -------------------------------------------------------------------------- */
+
+main .grid,
+main [class*="-grid"] {
+  row-gap: 20px !important;
+  column-gap: 20px !important;
+  align-content: start !important;
+  align-items: start !important;
+}
+
+main .card,
+main [class*="-card"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. CONTENT BLOCKS
+   -------------------------------------------------------------------------- */
+
+main .section-content,
+main .section-inner,
+main .content-wrapper,
+main .content-container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   11. PREVENT EMPTY FLEX DISTRIBUTION
+   -------------------------------------------------------------------------- */
+
+main .section,
+main .section > .container,
+main .section-inner,
+main .content-wrapper,
+main .hero,
+main .hero-section {
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   12. ACADEMIC PROFILE / BUTTON GROUPS
+   -------------------------------------------------------------------------- */
+
+main .academic-profiles,
+main .profile-links,
+main .social-links,
+main .button-group,
+main .actions {
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+  gap: 12px !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. DESKTOP
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1025px) {
+
+  main .section {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  main .section-header {
+    margin-bottom: 22px !important;
+  }
+
+  main .section-title {
+    margin-bottom: 8px !important;
+  }
+
+  main .section-subtitle {
+    line-height: 1.55 !important;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   14. TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  main .section {
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  main .section-header {
+    margin-bottom: 20px !important;
+  }
+
+  main .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  main .section-title {
+    max-width: 100%;
+  }
+
+  main .section-subtitle {
+    max-width: 100%;
+  }
+
+  main .grid,
+  main [class*="-grid"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   15. MOBILE / ANDROID
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+  main .section {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
+  main .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  main .section-header {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 18px !important;
+  }
+
+  main .section-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 8px !important;
+  }
+
+  main .section-subtitle {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  main .grid,
+  main [class*="-grid"] {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr !important;
+    row-gap: 16px !important;
+  }
+
+  main .card,
+  main [class*="-card"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  main .hero,
+  main .hero-section,
+  main #hero {
+    padding-top: 24px !important;
+    padding-bottom: 20px !important;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   16. EXTRA SMALL PHONES
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+  main .section {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  main .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  main .section-title {
+    font-size: 1.55rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   END LAYOUT V4
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HERO PORTRAIT POSITION REFINEMENT
+   Purpose:
+   - Keep portrait completely below fixed navigation
+   - Preserve existing hero layout and spacing
+   - Do not modify text/content positioning
+   ========================================================================== */
+
+/* Desktop portrait */
+.hero-visual-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  top: 32px;
+}
+
+/* Keep portrait visually contained */
+.hero-image-wrapper .image-frame {
+  overflow: hidden;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .hero-image-wrapper {
+    top: 36px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1199px) {
+  .hero-image-wrapper {
+    top: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-image-wrapper {
+    top: 18px;
+  }
+}
+
+/* ==========================================================================
+   END HERO PORTRAIT POSITION REFINEMENT
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HERO TEXT / NAVBAR OVERLAP FIX
+   --------------------------------------------------------------------------
+   Purpose:
+   - Keep Hero text completely below the fixed navigation
+   - Preserve the corrected portrait position
+   - Do NOT alter global section spacing
+   - Do NOT move the Hero portrait
+   ========================================================================== */
+
+/* Desktop: move only the Hero text block below the navbar */
+@media (min-width: 1025px) {
+  .hero-text-content {
+    position: relative;
+    top: 42px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-text-content {
+    position: relative;
+    top: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-text-content {
+    position: relative;
+    top: 18px;
+  }
+}
+
+/* ==========================================================================
+   END HERO TEXT / NAVBAR OVERLAP FIX
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HERO TOP ALIGNMENT FIX
+   Purpose:
+   - Keep hero content completely below the fixed navbar
+   - Prevent hero photo from touching/entering navbar
+   - Preserve all existing section spacing
+   - Do NOT modify other portfolio sections
+   ========================================================================== */
+
+.hero-section {
+  padding-top: 125px !important;
+  padding-bottom: 60px !important;
+}
+
+/* Keep the entire hero grid safely below the navigation */
+.hero-grid-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* Desktop photo should never visually enter the navbar area */
+.hero-visual,
+.hero-image-container,
+.hero-profile-container,
+.hero-profile-card,
+.hero-image-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-section {
+    padding-top: 110px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: calc(var(--header-height) + 35px) !important;
+  }
+}
+
+/* ==========================================================================
+   END HERO TOP ALIGNMENT FIX
+   ========================================================================== */
+
+
+/* ==========================================================================
+   FINAL HERO / NAVBAR OVERLAP FIX
+   IMPORTANT:
+   This block intentionally comes LAST so it overrides previous hero rules.
+   Do not modify the spacing of the other portfolio sections.
+   ========================================================================== */
+
+/* Desktop and large screens */
+@media (min-width: 901px) {
+
+  main .hero-section {
+    padding-top: 125px !important;
+    padding-bottom: 60px !important;
+  }
+
+  main .hero-grid-layout {
+    position: relative !important;
+    z-index: 2 !important;
+    transform: translateY(28px);
+  }
+
+  main .hero-visual-content {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  main .hero-image-wrapper {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  main .image-frame {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 900px) {
+
+  main .hero-section {
+    padding-top: 105px !important;
+    padding-bottom: 50px !important;
+  }
+
+  main .hero-grid-layout {
+    transform: translateY(20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  main .hero-section {
+    padding-top: calc(var(--header-height) + 35px) !important;
+    padding-bottom: 45px !important;
+  }
+
+  main .hero-grid-layout {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   END FINAL HERO / NAVBAR OVERLAP FIX
+   ========================================================================== */
+
+
+/* ==========================================================================
+   MOBILE NAVBAR / HERO OVERLAP FIX
+   Desktop layout is already correct.
+   This only gives the mobile header its actual vertical space.
+   ========================================================================== */
+
+@media (max-width: 640px) {
+
+  /* The mobile navbar contains two rows of brand information,
+     therefore its real height is larger than the desktop variable. */
+  .navbar-header {
+    height: 88px !important;
+  }
+
+  .navbar-container {
+    min-height: 88px !important;
+  }
+
+  /* Push the hero completely below the mobile navbar */
+  main .hero-section {
+    margin-top: 88px !important;
+    padding-top: 28px !important;
+    min-height: auto !important;
+  }
+
+  /* Make sure the hero eyebrow cannot enter the navbar area */
+  main .hero-eyebrow {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+  .navbar-header {
+    height: 84px !important;
+  }
+
+  .navbar-container {
+    min-height: 84px !important;
+  }
+
+  main .hero-section {
+    margin-top: 84px !important;
+    padding-top: 24px !important;
+  }
+
+}
+
+/* ==========================================================================
+   END MOBILE NAVBAR / HERO OVERLAP FIX
+   ========================================================================== */
+

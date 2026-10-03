@@ -57,3 +57,6 @@ dist/
 .env.*
 !.env.example
 
+
+# Portfolio CV - intentionally included in GitHub
+!public/CV_ABDULLAHI_YUSUF_UMAR.pdf
